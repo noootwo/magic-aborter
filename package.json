@@ -1,0 +1,42 @@
+{
+  "name": "magic-aborter",
+  "version": "0.0.1",
+  "description": "An magic util to control everything abortable",
+  "homepage": "https://github.com/noootwo/magic-aborter",
+  "bugs": "https://github.com/noootwo/magic-aborter/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:noootwo/magic-aborter.git"
+  },
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build": "pnpm run clean && pnpm run build:cjs && pnpm run build:esm",
+    "clean": "rimraf dist",
+    "publish": "pnpm run build && bumpp"
+  },
+  "keywords": [
+    "aborter"
+  ],
+  "author": "noootwo",
+  "license": "MIT",
+  "dependencies": {
+    "mitt": "^3.0.1"
+  },
+  "devDependencies": {
+    "bumpp": "^9.8.1",
+    "tsc": "^2.0.4",
+    "rimraf": "^6.0.1"
+  }
+}
