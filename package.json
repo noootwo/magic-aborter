@@ -1,6 +1,6 @@
 {
   "name": "magic-aborter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An magic util to control everything abortable",
   "homepage": "https://github.com/noootwo/magic-aborter",
   "bugs": "https://github.com/noootwo/magic-aborter/issues",
